@@ -1,4 +1,4 @@
--- Drones Inherit Items v1.0.3
+-- Drones Inherit Items v1.0.0
 -- SmoothSpatula
 
 log.info("Successfully loaded ".._ENV["!guid"]..".")
