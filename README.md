@@ -10,6 +10,7 @@ Allows drones to inherit items from the player
 ## Special Thanks To
 * The Return Of Modding team
 * HSC for suggesting this
+* Kris for the help
 
 ## Contact
 For questions or bug reports, you can find us in the [RoRR Modding Server](https://discord.gg/VjS57cszMq) @Miguelito @Umigatari
