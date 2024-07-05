@@ -1,4 +1,4 @@
--- Drones Inherit Items v1.0.1
+-- Drones Inherit Items v1.0.2
 -- SmoothSpatula
 
 log.info("Successfully loaded ".._ENV["!guid"]..".")
@@ -48,4 +48,10 @@ gm.post_script_hook(gm.constants.init_drone, function(self, other, result, args)
     for _, item_id in ipairs(inventory_order) do
         gm.item_give(self, item_id, inventory_stack[item_id+1], 1)
     end
+end)
+
+gm.pre_script_hook(gm.constants.actor_skin_skinnable_set_skin, function(self, other, result, args) -- prevents a crash with the mocha, taken from Kris' code
+	if params["drones_inherit_items_enabled"] and gm.object_is_ancestor(args[1].value.object_index, gm.constants.pDrone) then
+		return false
+	end
 end)
